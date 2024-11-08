@@ -1,243 +1,299 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AU-Livery Food Delivery</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #FFA500;
-}
-.container {
-max-width: 600px;
-margin: 0 auto;
-padding: 20px;
-}
-header {
-text-align: center;
-margin-bottom: 20px;
-}
-header img {
-width: 100px;
-height: 100px;
-border-radius: 50%;
-margin-bottom: 10px;
-}
-h1 {
-color: #00008B;
-margin-bottom: 5px;
-}
-.tabs {
-display: flex;
-margin-bottom: 20px;
-}
-.tab {
-flex: 1;
-text-align: center;
-padding: 10px;
-background-color: #00008B;
-color: white;
-cursor: pointer;
-}
-.tab.active {
-background-color: #0000CD;
-}
-.thrilled {
-background-color: white;
-padding: 20px;
-border-radius: 5px;
-}
-.menu-item {
-margin-bottom: 20px;
-border: 1px solid #ddd;
-padding: 10px;
-border-radius: 5px;
-}
-.menu-item h3 {
-margin-top: 0;
-}
-select {
-width: 100%;
-padding: 10px;
-margin-bottom: 20px;
-}
-button {
-background-color: #4CAF50;
-border: none;
-color: white;
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-cursor: pointer;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU-Livery Food Delivery</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFA500; /* Changed background color to orange */
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #FFA500;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #00008B;
+            font-size: 36px;
+            margin-bottom: 5px;
+            font-family: 'Verdana', sans-serif;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        /* Tab Navigation */
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            justify-content: center;
+            border-bottom: 2px solid #ccc;
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            background-color: #00008B;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .tab:hover {
+            background-color: #4CAF50;
+        }
+        .tab.active {
+            background-color: #0000CD;
+        }
+        /* Menu Styles */
+        .menu-item {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .menu-item span {
+            font-size: 18px;
+            color: #555;
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        /* Button Styles */
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        /* Contact Section */
+        #contact-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+        }
+        #contact-content div {
+            margin-top: 15px;
+        }
+        /* Feedback Section */
+        #feedbacks-content p {
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-<header>
-<img src="file:///Users/macbook/Desktop/AU.png" alt="AU-Livery Logo">
-<h1>AU-Livery</h1>
-<p>Food Delivery for Averett University</p>
-</header>
-
-<div class="tabs">
-<div class="tab active" data-tab="menu">Menu</div>
-<div class="tab" data-tab="contact">Contact</div>
-<div class="tab" data-tab="feedbacks">Feedbacks</div>
+    <header>
+        <img src="path/to/your/logo.png" alt="AU-Livery Logo"> <!-- Ensure this path is correct -->
+        <h1>AU-Livery</h1>
+        <p>Food Delivery for Averett University</p>
+    </header>
+    <div class="tabs">
+        <div class="tab" data-tab="jut's">Jut's</div>
+        <div class="tab" data-tab="caff">Caff</div>
+        <div class="tab" data-tab="contact">Contact</div>
+        <div class="tab" data-tab="feedbacks">Feedbacks</div>
+    </div>
+    <div class="content">
+        <!-- Jut's Content -->
+        <div id="jut's-content" style="display: none;">
+            <select id="jut's-category-select">
+                <option value="COFFEE">COFFEE</option>
+                <option value="REFRESHERS">REFRESHERS</option>
+                <option value="JAVALANCHE">JAVALANCHE</option>
+                <option value="SMOOTHIES">SMOOTHIES</option>
+                <option value="SANDWICHES">SANDWICHES</option>
+                <option value="SIDES">SIDES</option>
+                <option value="DRINKS">DRINKS</option>
+            </select>
+            <div id="jut's-menu-items"></div>
+        </div>
+        <!-- Caff Content -->
+        <div id="caff-content" style="display: none;">
+            <select id="caff-category-select">
+                <option value="PIZZAS">PIZZAS</option>
+                <option value="PASTA">PASTA</option>
+                <option value="BURGER">BURGER</option>
+                <option value="TOPPINGS">TOPPINGS</option>
+                <option value="DRESSINGS">DRESSINGS</option>
+                <option value="SOUPS">SOUPS</option>
+            </select>
+            <div id="caff-menu-items"></div>
+        </div>
+        <!-- Contact Content -->
+        <div id="contact-content" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Click the button below to contact us via WhatsApp:</p>
+            <button onclick="contactWhatsApp()">Contact via WhatsApp</button>
+            <div>
+                <p>If you don’t have WhatsApp, contact us on Instagram: <strong>@au_livery</strong></p>
+                <p><strong>WEEK:</strong> 9:00 AM - 10:00 PM</p>
+                <p><strong>WEEKEND:</strong> 9:00 AM - 10:00 PM</p>
+                <p><em>"Pre-order the day before for the day after and save time!"</em></p>
+            </div>
+        </div>
+        <!-- Feedback Content -->
+        <div id="feedbacks-content" style="display: none;">
+            <h2>Feedbacks</h2>
+            <p>We value your opinion! Click the button below to give us your feedback:</p>
+            <button onclick="openFeedbackForm()">Give Feedback</button>
+        </div>
+    </div>
 </div>
-
-<div class="content">
-<div id="menu-content">
-<select id="category-select">
-<option value="COFFEE">COFFEE</option>
-<option value="REFRESHERS">REFRESHERS</option>
-<option value="JAVALANCHE">JAVALANCHE</option>
-<option value="SMOOTHIES">SMOOTHIES</option>
-<option value="SANDWICHES">SANDWICHES</option>
-<option value="SIDES">SIDES</option>
-<option value="DRINKS">DRINKS</option>
-</select>
-<div id="menu-items"></div>
-</div>
-<div id="contact-content" style="display: none;">
-<h2>Contact Us</h2>
-<p>Click the button below to contact us via WhatsApp:</p>
-<button onclick="contactWhatsApp()">Contact via WhatsApp</button>
-<p>You will be delivered in complete confidence only by Averett students.</p>
-<div>
-<p><p>If you don’t have WhatsApp, contact me on the Instagram account: au_livery</p>
-<p><strong>MWF:</strong> 8:00 AM - 9:00 AM / 11:30 AM - 10:00 PM</p>
-<p><strong>TTH:</strong> 8:00 AM - 9:00 AM / 11:00 AM-10:00 PM</p>
-<p><strong>WEEKEND:</strong> 9:00 AM - 11:00 PM</p>
-<p>"PRE-ORDER the day before for the day after and save time"</p>
-</div> 
-</div>
-<div id="feedbacks-content" style="display: none;">
-<h2>Feedbacks</h2>
-<p>We value your opinion! Click the button below to give us your feedback:</p>
-<button onclick="openFeedbackForm()">Give Feedback</button>
-</div>
-</div>
-</div>
-
 <script>
-const menuItems = {
-    COFFEE: [
-{ name: 'Caramel Macchiato', prices: { SM: 4.59, MED: 4.99, LRG: 5.29 }, calories: { SM: 335, MED: 445, LRG: 540 } },
-{ name: 'Cinnamon Spice Latte', prices: { SM: 4.89, MED: 5.29, LRG: 5.59 }, calories: { SM: 345, MED: 475, LRG: 630 } },
-{ name: 'Latte', prices: { SM: 4.29, MED: 4.79, LRG: 4.99 }, calories: { SM: 215, MED: 270, LRG: 350 } },
-{ name: 'Vanilla Latte', prices: { SM: 4.89, MED: 5.29, LRG: 5.59 }, calories: { SM: 295, MED: 370, LRG: 470 } },
-{ name: 'Mocha/White Mocha', prices: { SM: 4.49, MED: 4.99, LRG: 5.19 }, calories: { SM: 295, MED: 390, LRG: 510 } },
-{ name: 'Cappuccino', prices: { SM: 4.19, MED: 4.69, LRG: 4.89 }, calories: { SM: 140, MED: 175, LRG: 230 } },
-{ name: 'Americano', prices: { SM: 3.29, MED: 3.79, LRG: 3.99 }, calories: { SM: 10, MED: 15, LRG: 20 } },
-{ name: 'Coffee', prices: { SM: 2.49, MED: 2.89, LRG: 3.09 }, calories: { SM: 5, MED: 10, LRG: 15 } },
-{ name: 'Hot Chocolate', prices: { SM: 3.39, MED: 3.79, LRG: 3.99 }, calories: { SM: 310, MED: 425, LRG: 540 } },
-],
-REFRESHERS: [
-{ name: 'Dragon Fruit Lychee', prices: { SM: 4.19, MED: 4.49, LRG: 4.89 }, calories: { SM: 77, MED: 103, LRG: 120 } },
-{ name: 'Strawberry Acai', prices: { SM: 4.19, MED: 4.49, LRG: 4.89 }, calories: { SM: 88, MED: 120, LRG: 140 } },
-{ name: 'Watermelon Cucumber Mint', prices: { SM: 4.19, MED: 4.49, LRG: 4.89 }, calories: { SM: 94, MED: 117, LRG: 140 } },
-],
-JAVALANCHE: [
-{ name: 'Espresso', prices: { SM: 4.79, MED: 5.19, LRG: 5.49 }, calories: { SM: 360, MED: 475, LRG: 480 } },
-{ name: 'Caramel', prices: { SM: 4.99, MED: 5.39, LRG: 5.69 }, calories: { SM: 420, MED: 600, LRG: 665 } },
-{ name: 'Mocha', prices: { SM: 4.99, MED: 5.39, LRG: 5.69 }, calories: { SM: 405, MED: 565, LRG: 615 } },
-{ name: 'White Mocha', prices: { SM: 4.99, MED: 5.39, LRG: 5.69 }, calories: { SM: 410, MED: 575, LRG: 630 } },
-{ name: 'Strawberry Cream', prices: { SM: 4.99, MED: 5.39, LRG: 5.69 }, calories: { SM: 450, MED: 500, LRG: 560 } },
-{ name: 'Vanilla Cream', prices: { SM: 4.99, MED: 5.39, LRG: 5.69 }, calories: { SM: 470, MED: 530, LRG: 590 } },
-],
-SMOOTHIES: [
-{ name: 'Mango', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
-{ name: 'Mixed Berry', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
-{ name: 'Strawberry', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
-{ name: 'Straw/Bana', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
-{ name: 'Matcha Green Tea', prices: { SM: 4.69, MED: 5.29, LRG: 5.59 }, calories: { SM: 395, MED: 494, LRG: 575 } },
-],
-SANDWICHES: [
-{ name: 'Italian', price: 9.19, calories: 630, description: 'Ham, salami, prosciutto, fresh mozzarella, roasted red peppers, lettuce, tomato, onion, mayo, pepper relish, & hoogle splosh' },
-{ name: 'Chicken Caesar Wrap', price: 8.49, calories: 630, description: 'Grilled chicken, bacon, romaine lettuce, & Parmesan cheese' },
-{ name: 'Buffalo Chicken', price: 8.49, calories: 650, description: 'Grilled chicken, lettuce, tomato, onion, spicy pickles, & Buffalo blue spread' },
-{ name: 'Meatball', price: 8.49, calories: 650, description: 'Meatballs, tomato sauce, & provolone cheese' },
-{ name: 'Cuban', price: 8.49, calories: 500, description: 'Pulled pork, ham, Swiss cheese, lettuce, pickles, & yellow mustard' },
-{ name: 'Alabama BBQ Chicken', price: 9.79, calories: 770, description: 'Alabama BBQ sauce, bacon, pulled chicken, cheddar cheese, iceberg lettuce, sliced red onion, tomato, & pickles' },
-],
-SIDES: [
-{ name: 'Apple', price: 1.29 },
-{ name: 'Potato Salad', price: 3.49 },
-{ name: 'Signature Chips', price: 2.79 },
-{ name: "Miss Vickie's Chips", price: 2.59 },
-{ name: 'Fruit Cup', price: 3.39 },
-{ name: 'Soup or Chili Bowl', price: 4.69 },
-{ name: 'Craveworthy Cookie', price: 2.79 },
-],
-DRINKS: [
-{ name: 'Fountain Drink', prices: { SM: 1.99, MED: 2.49, LRG: 2.99 } },
-],
-};
+    const menuItems = {
+        COFFEE: [
+            { name: 'Caramel Macchiato', prices: { SM: 4.59, MED: 4.99, LRG: 5.29 }, calories: { SM: 335, MED: 445, LRG: 540 } },
+            { name: 'Cinnamon Spice Latte', prices: { SM: 4.89, MED: 5.29, LRG: 5.59 }, calories: { SM: 345, MED: 475, LRG: 630 } },
+            { name: 'Latte', prices: { SM: 4.29, MED: 4.79, LRG: 4.99 }, calories: { SM: 215, MED: 270, LRG: 350 } },
+            { name: 'Vanilla Latte', prices: { SM: 4.89, MED: 5.29, LRG: 5.59 }, calories: { SM: 295, MED: 370, LRG: 470 } },
+            { name: 'Mocha/White Mocha', prices: { SM: 4.49, MED: 4.99, LRG: 5.19 }, calories: { SM: 295, MED: 390, LRG: 510 } },
+            { name: 'Cappuccino', prices: { SM: 4.19, MED: 4.69, LRG: 4.89 }, calories: { SM: 140, MED: 175, LRG: 230 } },
+            { name: 'Americano', prices: { SM: 3.29, MED: 3.79, LRG: 3.99 }, calories: { SM: 10, MED: 15, LRG: 20 } },
+            { name: 'Coffee', prices: { SM: 2.49, MED: 2.89, LRG: 3.09 }, calories: { SM: 5, MED: 10, LRG: 15 } },
+            { name: 'Hot Chocolate', prices: { SM: 3.39, MED: 3.79, LRG: 3.99 }, calories: { SM: 310, MED: 425, LRG: 540 } },
+        ],
+        PIZZAS: [
+            { name: 'Classic Cheese Pizza', calories: 280 },
+            { name: 'Pepperoni Pizza', calories: 300 },
+        ],
+        PASTA: [
+            { name: 'Pasta of the day', calories: 30 },
+            { name: 'Alfredo Sauce (1 FL OZ)', calories: 50 },
+            { name: 'Marinara Sauce (1 FL OZ)', calories: 25 },
+        ],
+        BURGER: [
+            { name: 'Burger of the day (Hamburger / Turkey Burger / Black Bean Burger / Cheeseburger)', calories: 260 },
+            { name: 'Grilled Seasoned Chicken Breast', calories: 150, description: 'Tender chicken breast seasoned with a classic blend of salt & pepper, then grilled to perfection' },
+            { name: 'Fresh-Cut French Fries', calories: 150, description: 'House-cut hot and crispy russet French fries' },
+        ],
+        TOPPINGS: [
+            { name: 'Black Olives (1 ozw)', calories: 35 },
+            { name: 'Chopped Fresh Spinach (1/4 cup)', calories: 0 },
+            { name: 'Cucumbers (1 ozw)', calories: 0 },
+            { name: 'Grape Tomatoes (1 ozw)', calories: 5 },
+            { name: 'Romaine Lettuce (1 cup)', calories: 5 },
+            { name: 'Shredded Carrots (1 ozw)', calories: 10 },
+            { name: 'Sliced Beets (1 ozw)', calories: 10 },
+            { name: 'Sliced Green Bell Peppers (1 ozw)', calories: 5 },
+            { name: 'Sliced Red Onions (2 tablespoon)', calories: 70 },
+            { name: 'Black Beans (1 ozw)', calories: 30 },
+            { name: 'Chopped Hard-Cooked Egg (1 ozw)', calories: 45 },
+            { name: 'Garbanzo Beans (1 ozw)', calories: 45 },
+            { name: 'Shredded Cheddar Cheese (1 ozw)', calories: 110 },
+        ],
+        DRESSINGS: [
+            { name: 'Balsamic Vinaigrette (2 tablespoon)', calories: 60 },
+            { name: 'Honey Mustard Dressing (2 tablespoon)', calories: 130 },
+            { name: 'Lite Italian Dressing (2 tablespoon)', calories: 40 },
+            { name: 'Oil & Vinegar (2 tablespoon)', calories: 180 },
+            { name: 'Ranch Dressing (2 tablespoon)', calories: 100 },
+        ],
+        SOUPS: [
+            { name: 'Cheddar Jalapeno Cornbread', calories: 230 },
+            { name: 'Chicken Noodle Soup (6 fl oz)', calories: 80 },
+            { name: 'Roasted Corn & Potato Soup (6 fl oz)', calories: 80 },
+        ],
+    };
 
-function renderMenuItem(item) {
-const itemElement = document.createElement('div');
-itemElement.className = 'menu-item';
-itemElement.innerHTML = `
-<h3>${ item.name }</h3>
-${item.prices ?
-Object.entries(item.prices).map(([size, price]) =>
-`<div>
-<span>${size}</span>
-<span>$${price.toFixed(2)} ${item.calories ? `(${item.calories[size]} cal)`: ''}</span>
-</div>`
-).join('') :
-`<div>
-<span>$${item.price.toFixed(2)}</span>
-${item.calories ? `<span>${item.calories} cal</span>`: ''}
-</div>`
-}
-${item.description ? `<p>${item.description}</p>`: ''}
-`;
-return itemElement;
-}
+    function renderMenuItem(item) {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'menu-item';
+        itemElement.innerHTML = `
+            <h3>${item.name}</h3>
+            <div><span>${item.calories} Cal</span></div>
+            ${item.description ? `<p>${item.description}</p>` : ''}
+        `;
+        return itemElement;
+    }
 
-function renderMenu(category) {
-const menuItemsContainer = document.getElementById('menu-items');
-menuItemsContainer.innerHTML = '';
-if (menuItems[category]) {
-menuItems[category].forEach(item => {
-menuItemsContainer.appendChild(renderMenuItem(item));
-});
-}
-}
+    function renderMenu(category, menuType) {
+        const menuItemsContainer = document.getElementById(`${menuType}-menu-items`);
+        menuItemsContainer.innerHTML = '';
+        if (menuItems[category]) {
+            menuItems[category].forEach(item => {
+                menuItemsContainer.appendChild(renderMenuItem(item));
+            });
+        }
+    }
 
-document.getElementById('category-select').addEventListener('change', (e) => {
-renderMenu(e.target.value);
-});
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const tabName = tab.getAttribute('data-tab');
+            document.querySelectorAll('.content > div').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabName + '-content').style.display = 'block';
+            if (tabName === "jut's") {
+                const categorySelect = document.getElementById('jut\'s-category-select');
+                categorySelect.addEventListener('change', () => {
+                    renderMenu(categorySelect.value, 'jut\'s');
+                });
+                renderMenu(categorySelect.value, 'jut\'s'); // Initial render
+            } else if (tabName === "caff") {
+                const categorySelect = document.getElementById('caff-category-select');
+                categorySelect.addEventListener('change', () => {
+                    renderMenu(categorySelect.value, 'caff');
+                });
+                renderMenu(categorySelect.value, 'caff'); // Initial render
+            }
+        });
+    });
 
-document.querySelectorAll('.tab').forEach(tab => {
-tab.addEventListener('click', () => {
-document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-tab.classList.add('active');
-document.getElementById('menu-content').style.display = 'none';
-document.getElementById('contact-content').style.display = 'none';
-document.getElementById('feedbacks-content').style.display = 'none';
-document.getElementById(`${tab.dataset.tab}-content`).style.display = 'block';
-});
-});
+    function contactWhatsApp() {
+        window.open('https://wa.me/33619660643?text=Hello%2C%20this%20is%20AU-LIVERY.%0A%0AName%3A%20%0APayment%20Method%20%28Meals%20Swipe%2C%20Jut%E2%80%99s%20Bucks%2C%20Card%2C%20cash%2C%20bitcoin%20%29%20%0AOrder%20%28jut%E2%80%99s%20or%20caff%20%29%3A%20%0APlease%20send%20a%20photo%20of%20the%20back%20of%20your%20ID%20card.%0AAddress%20%28on%2Foff%20campus%20%29%3A', '_blank');
+    }
 
-function contactWhatsApp() {
-window.open(' https://wa.me/33619660643?text=Hello%20it\'s%20AU-LIVERY%20delivery%0AStudent%20ID%20(number%2C%20name%2C%20picture)%3A%0AAddress%20on/out%20campus%20(Where%20are%20you%20)%3A%0AO rder%20from%20menu%3A%0A%0A(2$%20delivery%20on%20campus.%204$%20out%20campus) ', '_blank');
-}
+    function openFeedbackForm() {
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSdt2j6lJONUwrvrT1IfkQLTknKyR4e3O-003HE1Fz6l13qxyg/viewform?vc=0', '_blank');
+    }
 
-function openFeedbackForm() {
-window.open(' https://docs.google.com/forms/d/e/1FAIpQLSdt2j6lJONUwrvrT1IfkQLTknKyR4e3O-003HE1Fz6l13qxyg/viewform?vc=0 ', '_blank');
-}
-
-// Initialize the menu with the first category
-renderMenu('JAVALANCHE');
+    // Default to Jut's tab
+    document.querySelector('.tab[data-tab="jut\'s"]').click();
 </script>
 </body>
 </html>

@@ -1,385 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AU-Livery Food Delivery</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFA500;
-            color: #333;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        /* Header Styles */
-        header {
-            margin: 0 auto;
-            margin-bottom: 30px;
-            background-color: #00008B;
-            border-radius: 10px;
-            padding: 40px 20px;
-            width: fit-content;
-            display: inline-block;
-        }
-        h1, p {
-            z-index: 10;
-            position: relative;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-            color: #FFFFFF;
-        }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 5px;
-            font-family: 'Verdana', sans-serif;
-        }
-        p {
-            font-size: 18px;
-        }
-        /* Tab Navigation */
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-            justify-content: center;
-            border-bottom: 2px solid #ccc;
-        }
-        .tab {
-            flex: 1;
-            text-align: center;
-            padding: 15px;
-            background-color: #00008B;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .tab:hover {
-            background-color: #4CAF50;
-        }
-        .tab.active {
-            background-color: #0000CD;
-        }
-        /* Menu Styles */
-        .menu-item {
-            margin-bottom: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            text-align: left;
-        }
-        .menu-item img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-        .menu-item h3 {
-            margin-top: 0;
-            font-size: 24px;
-            color: #333;
-        }
-        .menu-item .arrow {
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: navy;
-        }
-        .menu-item span {
-            font-size: 18px;
-            color: #555;
-        }
-        select {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-        /* Button Styles */
-        button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        /* Contact Section */
-        #contact-content p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #444;
-        }
-        #contact-content div {
-            margin-top: 15px;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>AU-Livery Food Delivery</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ <style>
+ /* General Styles */
+ body {
+ font-family: 'Segoe UI', Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #FFA500;
+ color: #333;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 30px;
+ }
+ /* Header Styles */
+ header {
+ background: linear-gradient(135deg, #00539C, #0066cc);
+ border-radius: 15px;
+ padding: 40px 30px;
+ margin-bottom: 30px;
+ box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+ }
+ h1, p {
+ color: #fff;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+ }
+ h1 {
+ font-size: 42px;
+ font-weight: bold;
+ margin-bottom: 10px;
+ }
+ p {
+ font-size: 20px;
+ }
+ /* Tab Navigation */
+ .tabs {
+ display: flex;
+ margin-bottom: 30px;
+ gap: 10px;
+ justify-content: center;
+ }
+ .tab {
+ padding: 15px 30px;
+ background-color: #00539C;
+ color: white;
+ cursor: pointer;
+ border-radius: 8px;
+ transition: all 0.3s ease;
+ box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+ }
+ .tab:hover {
+ background-color:  #333;
+ transform: translateY(-2px);
+ }
+ .tab.active {
+ background-color: #FFA500;
+ color: #000;
+ }
+ /* Menu Styles */
+ .menu-item {
+ margin-bottom: 25px;
+ background-color: #fff;
+ border-radius: 12px;
+ padding: 20px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+ display: flex;
+ align-items: flex-start;
+ gap: 15px;
+ }
+ .menu-item img {
+ width: 120px;
+ height: 120px;
+ border-radius: 8px;
+ object-fit: cover;
+ }
+ .menu-item h3 {
+ margin-top: 0;
+ font-size: 20px;
+ color: #333;
+ }
+ .menu-item .arrow {
+ font-size: 24px;
+ color: #FFA500;
+ }
+ .menu-item span {
+ font-size: 16px;
+ color: #333;
+ }
+ select {
+ width: 100%;
+ padding: 12px;
+ font-size: 16px;
+ border-radius: 8px;
+ border: 1px solid #ddd;
+ margin-bottom: 20px;
+ background-color: #fff;
+ }
+ /* Button Styles */
+ button {
+ background-color: #333;
+ border: none;
+ color: white;
+ padding: 15px 40px;
+ text-align: center;
+ font-size: 16px;
+ border-radius: 8px;
+ cursor: pointer;
+ margin-top: 20px;
+ transition: all 0.3s ease;
+ box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+ }
+ button:hover {
+ background-color: #333;
+ transform: translateY(-2px);
+ }
+ /* Contact Section */
+ #contact-content p {
+ font-size: 18px;
+ line-height: 1.6;
+ color: white;
+ }
+ #contact-content div {
+ margin-top: 15px;
+ }
+ </style>
 </head>
 <body>
 <div class="container">
-    <header>
-        <h1>AU-Livery</h1>
-        <p>Food Delivery for Averett University</p>
-    </header>
-    <div class="tabs">
-        <div class="tab" data-tab="order-contact">Order & Contact</div>
-        <div class="tab" data-tab="caff">Caff</div>
-        <div class="tab" data-tab="juts">Jut's</div>
-        <div class="tab" data-tab="special-shop">Special Shop</div>
-        <div class="tab" data-tab="mcdonalds">McDonald's</div>
-    </div>
-    <div class="content">
-        <!-- Order & Contact Content -->
-        <div id="order-contact-content" style="display: none;">
-            <h2>Order & Contact Us</h2>
-            <p>Click the button below to order us via WhatsApp:</p>
-            <button onclick="contactWhatsApp()">Contact via WhatsApp</button>
-            <div>
-                <p>If you don't have WhatsApp, contact us on Instagram: <strong>@au_livery</strong></p>
-                <p><strong>WEEK:</strong> 9:00 AM - 10:00 PM</p>
-                <p><strong>WEEKEND:</strong> 9:00 AM - 10:00 PM</p>
-                <p><em>"Pre-order the day before for the day after and save time!"</em></p>
-            </div>
-        </div>
-        <!-- McDonald's Content -->
-        <div id="mcdonalds-content" style="display: none;">
-            <h2>McDonald's</h2>
-            <p>Coming soon! Stay tuned for our McDonald's menu updates.</p>
-        </div>
-        <!-- Caff Content -->
-        <div id="caff-content" style="display: none;">
-            <select id="caff-category-select">
-                <option value="PIZZAS">PIZZAS</option>
-                <option value="PASTA">PASTA</option>
-                <option value="BURGER">BURGER</option>
-                <option value="SALAD">SALAD</option>
-                <option value="SAUCES">SAUCES</option>
-                <option value="WEEKEND_BREAKFAST">WEEKEND BREAKFAST</option>
-                <option value="DESSERT_OF_THE_DAY">DESSERT OF THE DAY</option>
-                <option value="DRINKS">DRINKS</option>
-            </select>
-            <div id="caff-menu-items"></div>
-        </div>
-        <!-- Jut's Content -->
-        <div id="juts-content" style="display: none;">
-            <select id="juts-category-select">
-                <option value="JAVALANCHE">JAVALANCHE</option>
-                <option value="SMOOTHIES">SMOOTHIES</option>
-                <option value="COFFEE">COFFEE</option>
-                <option value="REFRESHERS">REFRESHERS</option>
-                <option value="SANDWICHES">SANDWICHES</option>
-                <option value="SIDES">SIDES</option>
-                <option value="DRINKS">DRINKS</option>
-            </select>
-            <div id="juts-menu-items"></div>
-        </div>
-        <!-- Special Shop Content -->
-        <div id="special-shop-content" style="display: none;">
-            <h2>Special Shop</h2>
-            <select id="special-shop-category-select">
-                <option value="PROTEIN_PACKED">Protein Packed</option>
-                <option value="SALTY_CRAVINGS">Salty Cravings</option>
-                <option value="SWEET_SELECTIONS">Sweet Selections</option>
-                <option value="SALTY_SELECTION">Salty Selection</option>
-                <option value="HEAT_AND_EAT">Heat and Eat</option>
-                <option value="SAVORY_SNACKS">Savory Snacks</option>
-                <option value="FOOD_FRIDGE">Food Fridge</option>
-                <option value="FRIDGE_DRINKS">Fridge Drinks</option>
-            </select>
-            <div id="special-shop-menu-items"></div>
-        </div>
-    </div>
+ <header>
+ <h1>AU-Livery</h1>
+ <p>Food Delivery for Averett University</p>
+ </header>
+ <div class="tabs">
+ <div class="tab" data-tab="order-contact">Order & Contact</div>
+ <div class="tab" data-tab="caff">Caff</div>
+ <div class="tab" data-tab="juts">Jut's</div>
+ <div class="tab" data-tab="special-shop">Special Shop</div>
+ <div class="tab" data-tab="mcdonalds">McDonald's</div>
+ <div class="tab" data-tab="subway">Subway</div>
+ </div>
+ <div class="content">
+ <!-- Order & Contact Content -->
+ <div id="order-contact-content" style="display: none;">
+ <h2>Order & Contact Us</h2>
+ <p>Click the button below to order us via WhatsApp:</p>
+ <button onclick="contactWhatsApp()">Contact via WhatsApp</button>
+ <div>
+ <p>If you don't have WhatsApp, contact us on Instagram: <strong>@au_livery</strong></p>
+ <p><strong>WEEK:</strong> 9:00 AM - 10:00 PM</p>
+ <p><strong>WEEKEND:</strong> 9:00 AM - 10:00 PM</p>
+ <p><em>"Pre-order the day before for the day after and save time!"</em></p>
+ </div>
+ </div>
+ <!-- McDonald's Content -->
+ <div id="mcdonalds-content" style="display: none;">
+ <h2><i class="fas fa-hamburger"></i> McDonald's</h2>
+ <p>Choose and order HERE ⬆️</p>
+ <p><a href="https://www.mcdonalds.com/us/en-us/full-menu.html" target="_blank">View Full McDonald's Menu</a></p>
+ <img src="https://www.freepnglogos.com/uploads/mcdonald-s-logo-png-1.png" alt="McDonald's Logo" style="max-width: 200px; display: block; margin: 20px auto;">
+ </div>
+ <!-- Subway Content -->
+ <div id="subway-content" style="display: none;">
+ <h2><i class="fas fa-sandwich"></i> Subway</h2>
+ <p>Choose and order HERE ⬆️</p>
+ <p><a href="https://www.subway.com/en-us/menunutrition/menu" target="_blank">View Full Subway Menu</a></p>
+ <img src="https://www.freepnglogos.com/uploads/subway-logo-png-5.png" alt="Subway Logo" style="max-width: 200px; display: block; margin: 20px auto;">
+ </div>
+ <!-- Caff Content -->
+ <div id="caff-content" style="display: none;">
+ <select id="caff-category-select">
+ <option value="PIZZAS">PIZZAS</option>
+ <option value="PASTA">PASTA</option>
+ <option value="BURGER">BURGER</option>
+ <option value="SALAD">SALAD</option>
+ <option value="SAUCES">SAUCES</option>
+ <option value="WEEKEND_BREAKFAST">WEEKEND BREAKFAST</option>
+ <option value="DESSERT_OF_THE_DAY">DESSERT OF THE DAY</option>
+ <option value="DRINKS">DRINKS</option>
+ </select>
+ <div id="caff-menu-items"></div>
+ </div>
+ <!-- Jut's Content -->
+ <div id="juts-content" style="display: none;">
+ <select id="juts-category-select">
+ <option value="JAVALANCHE">JAVALANCHE</option>
+ <option value="SMOOTHIES">SMOOTHIES</option>
+ <option value="COFFEE">COFFEE</option>
+ <option value="REFRESHERS">REFRESHERS</option>
+ <option value="SANDWICHES">SANDWICHES</option>
+ <option value="SIDES">SIDES</option>
+ <option value="DRINKS">DRINKS</option>
+ </select>
+ <div id="juts-menu-items"></div>
+ </div>
+ <!-- Special Shop Content -->
+ <div id="special-shop-content" style="display: none;">
+ <h2><i class="fas fa-store"></i> Special Shop</h2>
+ <select id="special-shop-category-select">
+ <option value="PROTEIN_PACKED">Protein Packed</option>
+ <option value="SALTY_CRAVINGS">Salty Cravings</option>
+ <option value="SWEET_SELECTIONS">Sweet Selections</option>
+ <option value="SALTY_SELECTION">Salty Selection</option>
+ <option value="HEAT_AND_EAT">Heat and Eat</option>
+ <option value="SAVORY_SNACKS">Savory Snacks</option>
+ <option value="FOOD_FRIDGE">Food Fridge</option>
+ <option value="FRIDGE_DRINKS">Fridge Drinks</option>
+ </select>
+ <div id="special-shop-menu-items"></div>
+ </div>
+ </div>
 </div>
 <script>
-    const menuItems = {
-        PIZZAS: [
-            { name: 'Classic Cheese Pizza', calories: 280, image: 'https://example.com/pizza.jpg' },
-            { name: 'Pepperoni Pizza', calories: 300, image: 'https://example.com/pepperoni_pizza.jpg' },
-        ],
-        PASTA: [
-            { name: 'Pasta of the day', calories: 300 },
-            { name: 'Alfredo Sauce (1 FL OZ)', calories: 50 },
-            { name: 'Marinara Sauce (1 FL OZ)', calories: 25 },
-        ],
-        BURGER: [
-            { name: 'Burger of the day', calories: 260, image: 'https://example.com/burger.jpg' },
-            { name: 'Grilled Seasoned Chicken Breast', calories: 150, image: 'https://example.com/chicken.jpg' },
-        ],
-        SALAD: [
-            { name: 'Salad 1', description: 'Romaine Lettuce, Black Olives, Cucumbers', image: 'https://example.com/salad.jpg' },
-            { name: 'Salad 2', description: 'Corn salad, Chopped Hard-Cooked Egg', image: 'https://example.com/salad2.jpg' },
-        ],
-        SAUCES: [
-            { name: 'Balsamic Vinaigrette (2 tbsp)', calories: 60 },
-            { name: 'Honey Mustard Dressing (2 tbsp)', calories: 130 },
-        ],
-        WEEKEND_BREAKFAST: [
-            { name: 'Omelette', description: 'Made with fresh eggs, cheese, and a variety of vegetables' },
-            { name: 'Bacon', description: 'Crispy bacon strips cooked to perfection' },
-        ],
-        DESSERT_OF_THE_DAY: [
-            { name: 'Daily Dessert', description: "Ask us about today's special dessert!" }
-        ],
-        DRINKS: [
-            { name: 'Fountain Drink', prices: { SM: 1.99, MED: 2.49, LRG: 2.99 } },
-        ],
-        JAVALANCHE: [
-            { name: 'Espresso', prices: { SM: 4.79, MED: 5.19, LRG: 5.49 }, calories: { SM: 360, MED: 475, LRG: 480 } },
-            { name: 'Caramel', prices: { SM: 4.99, MED: 5.39, LRG: 5.69 }, calories: { SM: 420, MED: 600, LRG: 665 } },
-        ],
-        SMOOTHIES: [
-            { name: 'Mango', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
-            { name: 'Mixed Berry', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
-        ],
-        COFFEE: [
-            { name: 'Caramel Macchiato', prices: { SM: 4.59, MED: 4.99, LRG: 5.29 }, calories: { SM: 335, MED: 445, LRG: 540 } },
-            { name: 'Cinnamon Spice Latte', prices: { SM: 4.89, MED: 5.29, LRG: 5.59 }, calories: { SM: 345, MED: 475, LRG: 630 } },
-        ],
-        REFRESHERS: [
-            { name: 'Dragon Fruit Lychee', prices: { SM: 4.19, MED: 4.49, LRG: 4.89 }, calories: { SM: 77, MED: 103, LRG: 120 } },
-            { name: 'Strawberry Acai', prices: { SM: 4.19, MED: 4.49, LRG: 4.89 }, calories: { SM: 88, MED: 120, LRG: 140 } },
-        ],
-        SANDWICHES: [
-            { name: 'Meals Swipe', price: 8.49, calories: 630, description: 'Up to You' },
-            { name: 'Italian', price: 9.19, calories: 630, description: 'Ham, salami, prosciutto, fresh mozzarella' },
-        ],
-        SIDES: [
-            { name: 'Apple', price: 1.29 },
-            { name: 'Potato Salad', price: 3.49 },
-        ],
-        FOOD_FRIDGE: [
-            { name: 'Sausage Egg Cheese Cross', price: 3.99 },
-            { name: 'Sausage Egg Cheese Biscuit', price: 3.99 },
-        ],
-        FRIDGE_DRINKS: [
-            { name: 'COCA COLA', price: 2.79 },
-            { name: 'SPRITE', price: 2.79 },
-        ],
-        PROTEIN_PACKED: [
-            { name: 'EDGE SHAVE GEL SENSITIV', price: 6.59 },
-            { name: 'BIC COMFORT 3 BLADE 4PK', price: 7.49 },
-        ],
-        SAVORY_SNACKS: [
-            { name: 'HORMEL TURKEY & DRESSIN', price: 4.29 },
-            { name: 'SNYDER MINI PRETZEL', price: 1.99 },
-        ],
-        HEAT_AND_EAT: [
-            { name: 'QKR CUP OATMEAL APPLE/CINN', price: 1.99 },
-            { name: 'RAISIN BRAN CRUNCH CIC', price: 2.99 },
-        ],
-        SALTY_SELECTION: [
-            { name: 'PLANT CASHEWS', price: 2.79 },
-            { name: 'PLANT HR CASHEWS', price: 2.79 },
-        ],
-        SWEET_SELECTIONS: [
-            { name: 'HARIBO GOLD BEAR SUP', price: 2.99 },
-            { name: 'HARIBO SOUR GOLD BEARS', price: 2.99 },
-        ],
-        SALTY_CRAVINGS: [
-            { name: 'LAYS CHIPS', price: 3.03 },
-            { name: 'KIT KAT WHITE KS', price: 3.29 },
-        ]
-    };
+ const menuItems = {
+ PIZZAS: [
+ { name: 'Classic Cheese Pizza', calories: 280, image: 'https://example.com/pizza.jpg' },
+ { name: 'Pepperoni Pizza', calories: 300, image: 'https://example.com/pepperoni_pizza.jpg' },
+ ],
+ PASTA: [
+ { name: 'Pasta of the day', calories: 300 },
+ { name: 'Alfredo Sauce (1 FL OZ)', calories: 50 },
+ { name: 'Marinara Sauce (1 FL OZ)', calories: 25 },
+ ],
+ BURGER: [
+ { name: 'Burger of the day', calories: 260, image: 'https://example.com/burger.jpg' },
+ { name: 'Grilled Seasoned Chicken Breast', calories: 150, image: 'https://example.com/chicken.jpg' },
+ ],
+ SALAD: [
+ { name: 'Salad 1', description: 'Romaine Lettuce, Black Olives, Cucumbers', image: 'https://example.com/salad.jpg' },
+ { name: 'Salad 2', description: 'Corn salad, Chopped Hard-Cooked Egg', image: 'https://example.com/salad2.jpg' },
+ ],
+ SAUCES: [
+ { name: 'Balsamic Vinaigrette (2 tbsp)', calories: 60 },
+ { name: 'Honey Mustard Dressing (2 tbsp)', calories: 130 },
+ ],
+ WEEKEND_BREAKFAST: [
+ { name: 'Omelette', description: 'Made with fresh eggs, cheese, and a variety of vegetables' },
+ { name: 'Bacon', description: 'Crispy bacon strips cooked to perfection' },
+ ],
+ DESSERT_OF_THE_DAY: [
+ { name: 'Daily Dessert', description: "Ask us about today's special dessert!" }
+ ],
+ DRINKS: [
+ { name: 'Fountain Drink', prices: { SM: 1.99, MED: 2.49, LRG: 2.99 } },
+ ],
+ JAVALANCHE: [
+ { name: 'Espresso', prices: { SM: 4.79, MED: 5.19, LRG: 5.49 }, calories: { SM: 360, MED: 475, LRG: 480 } },
+ { name: 'Caramel', prices: { SM: 4.99, MED: 5.39, LRG: 5.69 }, calories: { SM: 420, MED: 600, LRG: 665 } },
+ ],
+ SMOOTHIES: [
+ { name: 'Mango', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
+ { name: 'Mixed Berry', prices: { SM: 4.89, MED: 5.39, LRG: 5.59 }, calories: { SM: 315, MED: 315, LRG: 365 } },
+ ],
+ COFFEE: [
+ { name: 'Caramel Macchiato', prices: { SM: 4.59, MED: 4.99, LRG: 5.29 }, calories: { SM: 335, MED: 445, LRG: 540 } },
+ { name: 'Cinnamon Spice Latte', prices: { SM: 4.89, MED: 5.29, LRG: 5.59 }, calories: { SM: 345, MED: 475, LRG: 630 } },
+ ],
+ REFRESHERS: [
+ { name: 'Dragon Fruit Lychee', prices: { SM: 4.19, MED: 4.49, LRG: 4.89 }, calories: { SM: 77, MED: 103, LRG: 120 } },
+ { name: 'Strawberry Acai', prices: { SM: 4.19, MED: 4.49, LRG: 4.89 }, calories: { SM: 88, MED: 120, LRG: 140 } },
+ ],
+ SANDWICHES: [
+ { name: 'Meals Swipe', price: 8.49, calories: 630, description: 'Up to You' },
+ { name: 'Italian', price: 9.19, calories: 630, description: 'Ham, salami, prosciutto, fresh mozzarella' },
+ ],
+ SIDES: [
+ { name: 'Apple', price: 1.29 },
+ { name: 'Potato Salad', price: 3.49 },
+ ],
+ FOOD_FRIDGE: [
+ { name: 'Sausage Egg Cheese Cross', price: 3.99 },
+ { name: 'Sausage Egg Cheese Biscuit', price: 3.99 },
+ ],
+ FRIDGE_DRINKS: [
+ { name: 'COCA COLA', price: 2.79 },
+ { name: 'SPRITE', price: 2.79 },
+ ],
+ PROTEIN_PACKED: [
+ { name: 'EDGE SHAVE GEL SENSITIV', price: 6.59 },
+ { name: 'BIC COMFORT 3 BLADE 4PK', price: 7.49 },
+ ],
+ SAVORY_SNACKS: [
+ { name: 'HORMEL TURKEY & DRESSIN', price: 4.29 },
+ { name: 'SNYDER MINI PRETZEL', price: 1.99 },
+ ],
+ HEAT_AND_EAT: [
+ { name: 'QKR CUP OATMEAL APPLE/CINN', price: 1.99 },
+ { name: 'RAISIN BRAN CRUNCH CIC', price: 2.99 },
+ ],
+ SALTY_SELECTION: [
+ { name: 'PLANT CASHEWS', price: 2.79 },
+ { name: 'PLANT HR CASHEWS', price: 2.79 },
+ ],
+ SWEET_SELECTIONS: [
+ { name: 'HARIBO GOLD BEAR SUP', price: 2.99 },
+ { name: 'HARIBO SOUR GOLD BEARS', price: 2.99 },
+ ],
+ SALTY_CRAVINGS: [
+ { name: 'LAYS CHIPS', price: 3.03 },
+ { name: 'KIT KAT WHITE KS', price: 3.29 },
+ ]
+ };
 
-    function displayMenu(category, menuType) {
-        const menuItemsContainer = document.getElementById(`${menuType}-menu-items`);
-        menuItemsContainer.innerHTML = '';
-        if (menuItems[category]) {
-            menuItems[category].forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.className = 'menu-item';
+ function displayMenu(category, menuType) {
+ const menuItemsContainer = document.getElementById(`${menuType}-menu-items`);
+ menuItemsContainer.innerHTML = '';
+ if (menuItems[category]) {
+ menuItems[category].forEach(item => {
+ const itemElement = document.createElement('div');
+ itemElement.className = 'menu-item';
 
-                // Display product details
-                let details = `<span class="arrow">➔</span>
-                    <h3>${item.name}</h3>`;
+ // Display product details
+ let details = `<span class="arrow">➔</span>
+ <h3>${item.name}</h3>`;
 
-                if (item.image) {
-                    details += `<img src="${item.image}" alt="${item.name}">`;
-                }
+ if (item.image) {
+ details += `<img src="${item.image}" alt="${item.name}">`;
+ }
 
-                if (item.calories && typeof item.calories === 'object') {
-                    details += `<div>Calories: ${Object.entries(item.calories).map(([size, cal]) => `${size}: ${cal} Cal`).join(', ')}</div>`;
-                } else if (item.calories) {
-                    details += `<div>Calories: ${item.calories} Cal</div>`;
-                }
+ if (item.calories && typeof item.calories === 'object') {
+ details += `<div>Calories: ${Object.entries(item.calories).map(([size, cal]) => `${size}: ${cal} Cal`).join(', ')}</div>`;
+ } else if (item.calories) {
+ details += `<div>Calories: ${item.calories} Cal</div>`;
+ }
 
-                if (item.prices) {
-                    details += `<div>Prices: ${Object.entries(item.prices).map(([size, price]) => `${size}: $${price.toFixed(2)}`).join(', ')}</div>`;
-                } else if (item.price) {
-                    details += `<div>Price: $${item.price.toFixed(2)}</div>`;
-                }
+ if (item.prices) {
+ details += `<div>Prices: ${Object.entries(item.prices).map(([size, price]) => `${size}: $${price.toFixed(2)}`).join(', ')}</div>`;
+ } else if (item.price) {
+ details += `<div>Price: $${item.price.toFixed(2)}</div>`;
+ }
 
-                if (item.description) {
-                    details += `<p>${item.description}</p>`;
-                }
+ if (item.description) {
+ details += `<p>${item.description}</p>`;
+ }
 
-                itemElement.innerHTML = details;
-                menuItemsContainer.appendChild(itemElement);
-            });
-        }
-    }
+ itemElement.innerHTML = details;
+ menuItemsContainer.appendChild(itemElement);
+ });
+ }
+ }
 
-    document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const tabName = tab.getAttribute('data-tab');
-                document.querySelectorAll('.content > div').forEach(content => {
-                    content.style.display = 'none';
-                });
-                document.getElementById(tabName + '-content').style.display = 'block';
-                if (tabName === "juts") {
-                    const categorySelect = document.getElementById('juts-category-select');
-                    categorySelect.addEventListener('change', () => {
-                        displayMenu(categorySelect.value, 'juts');
-                    });
-                    displayMenu(categorySelect.value, 'juts');
-                } else if (tabName === "caff") {
-                    const categorySelect = document.getElementById('caff-category-select');
-                    categorySelect.addEventListener('change', () => {
-                        displayMenu(categorySelect.value, 'caff');
-                    });
-                    displayMenu(categorySelect.value, 'caff');
-                } else if (tabName === "special-shop") {
-                    const categorySelect = document.getElementById('special-shop-category-select');
-                    categorySelect.addEventListener('change', () => {
-                        displayMenu(categorySelect.value, 'special-shop');
-                    });
-                    displayMenu(categorySelect.value, 'special-shop');
-                }
-            });
-        });
+ document.addEventListener("DOMContentLoaded", function() {
+ document.querySelectorAll('.tab').forEach(tab => {
+ tab.addEventListener('click', () => {
+ document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+ tab.classList.add('active');
+ const tabName = tab.getAttribute('data-tab');
+ document.querySelectorAll('.content > div').forEach(content => {
+ content.style.display = 'none';
+ });
+ document.getElementById(tabName + '-content').style.display = 'block';
+ if (tabName === "juts") {
+ const categorySelect = document.getElementById('juts-category-select');
+ categorySelect.addEventListener('change', () => {
+ displayMenu(categorySelect.value, 'juts');
+ });
+ displayMenu(categorySelect.value, 'juts');
+ } else if (tabName === "caff") {
+ const categorySelect = document.getElementById('caff-category-select');
+ categorySelect.addEventListener('change', () => {
+ displayMenu(categorySelect.value, 'caff');
+ });
+ displayMenu(categorySelect.value, 'caff');
+ } else if (tabName === "special-shop") {
+ const categorySelect = document.getElementById('special-shop-category-select');
+ categorySelect.addEventListener('change', () => {
+ displayMenu(categorySelect.value, 'special-shop');
+ });
+ displayMenu(categorySelect.value, 'special-shop');
+ }
+ });
+ });
 
-        // Default to Order & Contact tab
-        document.querySelector('.tab[data-tab="order-contact"]').click();
-    });
+ // Default to Order & Contact tab
+ document.querySelector('.tab[data-tab="order-contact"]').click();
+ });
 
-    function contactWhatsApp() {
-        window.open('https://wa.me/33619660643?text=Hello%2C%20this%20is%20AU-LIVERY.%0A%0AName%3A%20%0APayment%20Method%20%28Meals%20Swipe%2C%20Jut%E2%80%99s%20Bucks%2C%20Card%2C%20cash%2C%20bitcoin%20%29%20%0AOrder%20%28jut%E2%80%99s%20or%20caff%20%29%3A%20%0APlease%20send%20a%20photo%20of%20the%20back%20of%20your%20ID%20card.%0AAddress%20%28on%2Foff%20campus%20%29%3A', '_blank');
-    }
+ function contactWhatsApp() {
+ window.open('https://wa.me/33619660643?text=Hello%2C%20this%20is%20AU-LIVERY.%0A%0AName%3A%20%0APayment%20Method%20%28Meals%20Swipe%2C%20Jut%E2%80%99s%20Bucks%2C%20Card%2C%20cash%2C%20bitcoin%20%29%20%0AOrder%20%28jut%E2%80%99s%20or%20caff%20%29%3A%20%0APlease%20send%20a%20photo%20of%20the%20back%20of%20your%20ID%20card.%0AAddress%20%28on%2Foff%20campus%20%29%3A', '_blank');
+ }
 </script>
 </body>
 </html>
-
